@@ -1,0 +1,41 @@
+{
+    "FixedFileInfo":  {
+                          "FileVersion":  {
+                                              "Major":  0,
+                                              "Minor":  8,
+                                              "Patch":  2,
+                                              "Build":  0
+                                          },
+                          "ProductVersion":  {
+                                                 "Major":  0,
+                                                 "Minor":  8,
+                                                 "Patch":  2,
+                                                 "Build":  0
+                                             },
+                          "FileFlagsMask":  "3f",
+                          "FileFlags":  "00",
+                          "FileOS":  "040004",
+                          "FileType":  "01",
+                          "FileSubType":  "00"
+                      },
+    "StringFileInfo":  {
+                           "Comments":  "Taller local de archivos 3D, inventario y punto de venta.",
+                           "CompanyName":  "Plumas y Astas Studio",
+                           "FileDescription":  "3D-Woods · Tu taller, en orden",
+                           "FileVersion":  "0.8.2.0",
+                           "InternalName":  "3D-Woods",
+                           "LegalCopyright":  "© 2026 Plumas y Astas Studio. Todos los derechos reservados.",
+                           "LegalTrademarks":  "3D-Woods y Plumas y Astas Studio",
+                           "OriginalFilename":  "3D-Woods.exe",
+                           "PrivateBuild":  "",
+                           "ProductName":  "3D-Woods",
+                           "ProductVersion":  "0.8.2",
+                           "SpecialBuild":  ""
+                       },
+    "VarFileInfo":  {
+                        "Translation":  {
+                                            "LangID":  "0409",
+                                            "CharsetID":  "04B0"
+                                        }
+                    }
+}

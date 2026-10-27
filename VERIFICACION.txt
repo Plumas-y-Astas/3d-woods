@@ -1,0 +1,118 @@
+﻿3D-Woods 0.8.2 · Verificación
+
+90 pruebas automatizadas verificadas: 59 JavaScript y 31 nativas.
+- Puente de impresión: lectura de G-code de Cura, PrusaSlicer, OrcaSlicer,
+  Bambu Studio y Simplify3D.
+- Tiempo, gramos por filamento, colores, capas, miniaturas y medidas por
+  cabecera o por recorridos del G-code.
+- Imagen del visor cuando el archivo no declara miniatura; selección manual de
+  material y color.
+- Sesiones de impresión con consumo proporcional, sin sobrepasar el stock.
+- Finalización suma piezas terminadas; anulación devuelve filamento y piezas.
+- Inicio rechaza stock insuficiente; descarte solo elimina sesiones sin consumo.
+- Progreso por tiempo limitado al 99 %; reconciliación interrumpe sesiones USB
+  inactivas.
+- Escaneo de la carpeta del puente, límites de tamaño y rechazo de rutas fuera
+  de esa carpeta.
+- Interfaz local: puente, inventario en vivo, impresión USB y estado persistente.
+- Posiciones manuales: intercambio, huecos, carpetas nuevas y restauración de
+  respaldo.
+- Regreso animado, cambio entre cajas seleccionadas y cancelación sin cajas
+  flotantes.
+- Arrastre de cajas sin confundirlo con la importación de archivos.
+- Selección USB normal, identidad anterior y puerto COM manual.
+- Error de puerto ocupado permanece visible tras consultar el estado; reintento
+  funcional.
+- Prueba de conexión seguida de impresión mediante la API nativa, con puerto
+  simulado.
+- La prueba de conexión solo envía M115; no envía movimientos ni calentamiento.
+- Reinicio tardío del firmware: solo se reintenta su identificación antes de
+  imprimir.
+- Rechazo de dispositivos distintos, puertos inválidos y baudios no admitidos.
+- Numeración, checksum, reenvío, pausa y fin de movimientos confirmados.
+- Costos, inventario, producción, POS, formatos, guardado y límites del taller.
+- Importación a la estantería sin tope de peso: se quitó el límite de 150 MB de
+  la interfaz y el de 200 MB del servidor local. La prueba de interfaz importa
+  un archivo que declara 151 MB. El visor conserva su límite de complejidad de
+  nueve millones de vértices y el puente mantiene sus 80 MB de G-code.
+- Estantería con muchos objetos: las cajas cerradas muestran su portada guardada
+  y no abren ninguna malla. Una prueba con cuarenta cajas comprueba que solo se
+  intenta cargar la que no tiene portada.
+- Portadas en segundo plano: se generan de una en una, solo para cajas visibles
+  o recién importadas, con imágenes WebP de 256 px. Las portadas antiguas se
+  compactan y se guardan por lotes, sin bloquear la interfaz.
+- Memoria acotada: la caché conserva como máximo 16 modelos o seis millones de
+  vértices y libera materiales y geometrías al cambiar de objeto.
+- Montajes gigantes: el visor limita la vista a 160 MB de archivos, avisa con
+  «Vista ligera» y permite elegir una pieza; el cálculo, la exportación y el
+  laminador siguen usando el montaje completo.
+- Lectura 3MF ligera: Prusa, Orca y Bambu se leen sin convertir el XML completo
+  en DOM, con extensión de producción y vistas previas de plato como portada.
+- Sincronización: una carpeta copiada con fechas distintas pero el mismo tamaño
+  no vuelve a cargar ni analizar los modelos al iniciar. Un archivo nuevo se
+  agrega como objeto propio salvo que la caja ya sea un montaje de varias piezas.
+- Guardado eficiente: al guardar el catálogo no se reescriben los
+  `.3dwoods.json` de las cajas que no cambiaron, y la revisión automática de
+  carpetas pasó de 15 segundos a dos minutos.
+- Actualizaciones desde GitHub: comparación de versiones con etiquetas v0.8.2,
+  versiones preliminares, repositorios usuario/repositorio y rechazo de rutas
+  inválidas.
+- Lectura de la versión publicada, notas y activos; exigencia de 3D-Woods.exe y
+  SHA256SUMS.txt; descarga por HTTPS limitada a GitHub.
+- Verificación SHA-256: se acepta el archivo correcto y se elimina el descargado
+  cuando el resumen no coincide. El instalador se niega a usar un archivo
+  alterado y espera a que la app cierre antes de reemplazarla.
+- Metadatos de Windows comprobados en la compilación: editor Plumas y Astas
+  Studio, producto 3D-Woods, versión 0.8.2. La firma Authenticode requiere el
+  certificado del estudio; no se incluyó un certificado de prueba en la versión.
+- La interfaz de Ajustes > Actualizaciones muestra versión, editor, repositorio,
+  estado y notas, con búsqueda automática y manual.
+- Limpieza de descargas temporales al iniciar y al instalar; la actualización
+  reemplaza solo el ejecutable y conserva los datos del usuario.
+- Filamentos con varios colores: validación, selección por línea de venta y
+  consumo del color elegido sin tocar los demás materiales.
+- Tickets abiertos: numeración estable W-000001, borradores persistentes,
+  migración y rechazo de tickets ya cobrados.
+- Devoluciones parciales: stock y dinero regresan, la venta original se conserva,
+  las devoluciones se pueden anular y la venta no se anula mientras las tenga.
+- Cortes de caja: el parcial informa sin reiniciar y el total inicia un periodo
+  nuevo conservando ventas y movimientos.
+- Ajustes aloja Impresoras y la marca del negocio; tickets, devoluciones y cortes
+  incluyen logo, datos del negocio y versión virtual descargable.
+- Interfaz: recuperación de un ticket abierto con su color, cambio de vista y
+  regreso al punto de venta sin perder el borrador; devolución y corte desde la
+  interfaz.
+- Categorías personalizables: migración sin duplicados ni nombres reservados,
+  cajas huérfanas asignadas a Sin categoría, filtros dinámicos, selector en la
+  ficha del objeto y alta, cambio de nombre y eliminación desde Ajustes.
+- Estante continuo tallado como árbol: una sola unidad con dos troncos de
+  corteza y anillos, tablas con forma de rama, cinco espacios por fila, cajas
+  compactas y hojas talladas visibles entre las cajas. Revisado en temas claro
+  y oscuro.
+- Inventario multicolor: un solo carrete dividido en dos mitades para dos
+  colores y en sectores para tres o más; conserva el aspecto de rollo con su
+  centro hueco.
+- Punto de venta: catálogo horizontal compacto y ticket previo al cobro sin la
+  imagen grande del comprobante.
+
+Las 51 pruebas JavaScript pasaron con npm run check y las 31 nativas con
+go test ./... en Windows x64. Los G-code de prueba son archivos representativos
+de cada laminador; no se ejecutó un
+laminador externo durante las pruebas. La ventana nativa de Windows, la
+instalación real de una actualización y una impresión física por USB no se
+probaron en este entorno. El envío USB se verificó con un dispositivo simulado;
+la descarga y la comprobación SHA-256 se verificaron con servidores HTTP locales
+de prueba y el flujo de GitHub queda listo para ejecutarse en Actions.
+
+Las pruebas de interfaz cubren el recorrido Puente → seguimiento → finalización
+→ USB → escaneo de carpeta, además de recuperar un ticket abierto con su color,
+registrar una devolución, generar un corte y crear, asignar, renombrar y
+eliminar una categoría sin perder cajas. El panel Ajustes > Actualizaciones se
+revisó con versión, editor y repositorio, sin conectar a GitHub durante las
+pruebas. La revisión visual de esta versión se hizo con Chromium en Windows; los
+comprobantes se validaron por su contenido y su documento virtual, pero falta
+una impresión física de prueba.
+
+Ejecutable compilado para Windows x64. La API GetCommPorts, el controlador y la
+respuesta real de la impresora requieren comprobación en el equipo del usuario.
+Si falla, guardar Diagnóstico USB permite revisar el error concreto.

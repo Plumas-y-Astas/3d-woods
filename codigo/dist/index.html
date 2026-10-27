@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#203d31"><meta name="description" content="Tu taller, en orden. Organiza modelos 3D en cajas, prepara impresiones y calcula tus precios con 3D-Woods.">
+  <title>3D-Woods · Tu taller, en orden</title>
+  <link rel="icon" href="./logo.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/addons/"}}</script>
+</head>
+<body>
+  <div id="app"><div class="boot"><img src="./logo.svg" width="80" alt="Jackalope"><h1>3D-Woods</h1><p>Abriendo las puertas del taller…</p></div></div>
+  <div id="modal-root"></div><div id="print-root" aria-hidden="true"></div><div id="toast" role="status" aria-live="polite"></div>
+  <input id="file-input" type="file" multiple hidden accept=".stl,.obj,.3mf,.glb,.gcode,.gco,.png,.jpg,.jpeg,.webp,.svg,.pdf,.txt,.mtl">
+  <input id="backup-input" type="file" hidden accept=".json">
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

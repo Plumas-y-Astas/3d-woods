@@ -1,0 +1,7 @@
+{
+  "version": "5.13.0",
+  "archive": "windows-x64.zip",
+  "sha256": "9dc851f90f294dc5d3566409c9c9ff27e780b0121031590a52c24900f5e07263",
+  "source": "https://github.com/Ultimaker/Cura/releases/tag/5.13.0",
+  "files": 25
+}

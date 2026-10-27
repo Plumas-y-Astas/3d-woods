@@ -1,0 +1,63 @@
+3D-WOODS 0.8.2 · WINDOWS X64 · LOCAL
+
+1. Extrae el ZIP completo. Abre 3D-Woods.exe.
+2. Si Windows indica que falta WebView2, instala Microsoft Edge WebView2 Runtime.
+   Enlace oficial: https://developer.microsoft.com/microsoft-edge/webview2/#download-section
+3. Ajustes > Carpeta de la estantería: elige tus proyectos.
+4. Inventario: edita tus filamentos, insumos, equipo y productos físicos. Los
+   filamentos con varios colores se muestran como un solo carrete dividido.
+5. Ajustes > Impresoras: configura el perfil y sus costos. En el mismo lugar
+   puedes poner el nombre, contacto y pie de tus tickets.
+6. Ajustes > Actualizaciones: revisa la versión y el editor (Plumas y Astas
+   Studio). Puedes buscar o descargar una versión nueva desde GitHub o desactivar
+   la búsqueda automática. La actualización se verifica con SHA-256 y se instala
+   al reiniciar; tus cajas, inventario y ajustes no se modifican.
+7. Ordenar cajas permite arrastrarlas entre huecos y estantes; Mover elige un lugar.
+   La estantería se ve como un solo mueble tallado en madera: troncos con
+   anillos de corte, tablas como ramas y hojas talladas. Las cajas son compactas.
+   En Ajustes > Categorías de cajas puedes crear, renombrar o eliminar categorías;
+   al eliminar una, sus cajas pasan a Sin categoría sin borrar archivos.
+8. Arrastra tus modelos a una caja. Cada estante tiene cinco espacios y no hay
+   límite de peso para importarlos. Las cajas cerradas muestran su portada y no
+   cargan el modelo 3D; solo se abre la caja que estás viendo.
+9. Puente de impresión: elige tu laminador y su carpeta de salida.
+   Lamina en Cura, PrusaSlicer, OrcaSlicer, Bambu Studio, Simplify3D o similar
+   y guarda el G-code en la carpeta vigilada. 3D-Woods lee tiempo, filamento,
+   color, medidas e imagen; ya no incluye un motor de laminado.
+10. Punto de venta: agrega productos, elige el color solicitado en cada pieza y
+    registra el cobro. El catálogo y el ticket son compactos; el logo aparece en
+    el comprobante final. Los tickets sin cobrar se guardan y puedes retomarlos.
+11. Tickets: imprime el comprobante, registra una devolución o genera un corte
+    de caja parcial o total.
+
+No necesitas instalar Python, Go ni Node.js para usar la app.
+Sí necesitas tu propio laminador externo para preparar el G-code.
+Puedes trabajar sin internet. Solo Ajustes > Actualizaciones consulta GitHub
+cuando buscas o permites la búsqueda automática.
+
+PARA ACTUALIZAR
+Usa Ajustes > Actualizaciones y pulsa Buscar actualizaciones. Si hay una versión
+nueva, descárgala y reinicia cuando la app lo indique. También puedes cerrar la
+versión anterior y abrir el ejecutable nuevo de este ZIP. Tus proyectos y
+configuración se conservan fuera del ejecutable. Se recomienda exportar un
+respaldo en Ajustes. No borres la carpeta donde están tus cajas.
+
+SOBRE LA FIRMA
+El ejecutable declara a Plumas y Astas Studio como editor y la versión instalada.
+La actualización se verifica con SHA-256. Para que Windows muestre la firma como
+verificada hace falta un certificado Authenticode del estudio; consulta FIRMA.md.
+Un certificado autofirmado no elimina los avisos de SmartScreen.
+
+AL IMPRIMIR
+Abre o arrastra un G-code en Puente de impresión. Revisa tiempo, gramos, color
+y medidas. Configura perfil, COM y baudios. Pulsa Probar conexión.
+Si falta el puerto en la lista, puedes elegir Puerto COM manual.
+Pulsa Revisar e imprimir para confirmar el envío. El inventario se descuenta
+según los comandos confirmados. Si falla, abre Diagnóstico USB y guarda el TXT.
+La app debe permanecer abierta con el PC encendido y el USB conectado.
+La conexión requiere protocolo Marlin compatible. No se ha probado en una
+impresora física desde este entorno; se probaron la lectura de G-code y un USB
+simulado.
+
+Consulta LEEME.md para uso, cálculo y límites.
+La carpeta codigo contiene las fuentes editables y las pruebas.

@@ -1,0 +1,20 @@
+# Binarios y archivos temporales de 3D-Woods
+*.exe
+*.bin
+*.old
+release/
+codigo/node_modules/
+node_modules/
+npm-debug.log*
+
+# Certificados: nunca subir la identidad del estudio
+*.pfx
+*.p12
+*.snk
+*.cer
+*.crt
+*.key
+
+# Descargas y temporales del actualizador
+codigo/updates/
+.3dwoods-papelera/

@@ -1,0 +1,1 @@
+Motor local CuraEngine 5.13.0 para Windows x64. Binarios oficiales sin modificar. Paquete de referencia de versiones anteriores; la versión 0.5.0 ya no lo incluye ni lo ejecuta. Fuentes, licencias y procedencia en third_party/CuraEngine.

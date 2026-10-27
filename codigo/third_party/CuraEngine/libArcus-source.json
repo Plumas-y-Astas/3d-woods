@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/Ultimaker/libArcus",
+  "commit": "d83dbaf10ac6b6b98e6482ec58a956e79b000ae6",
+  "version_file": "version: \"5.11.0\"",
+  "source_url": "https://codeload.github.com/Ultimaker/libArcus/tar.gz/d83dbaf10ac6b6b98e6482ec58a956e79b000ae6",
+  "note": "Upstream 5.11.0 source snapshot; official binary build commit not exposed in distribution."
+}
